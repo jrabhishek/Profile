@@ -8,9 +8,8 @@ import retrofit2.http.Query
 
 interface RandomUserApi {
     @GET("/api/?inc=name,email,cell&noinfo&nat=gb")
-    fun getUsers(@Query("results") results: Int): Call<ProfileResponce>
+    fun getUsers(@Query("results") results: Int): Call<PersonResponce>
 }
-
 
 private val retrofit = Retrofit.Builder().baseUrl("https://randomuser.me")
     .addConverterFactory(GsonConverterFactory.create())
