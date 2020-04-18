@@ -17,11 +17,8 @@ class MainActivity : AppCompatActivity() {
 
     fun setUpRecyclerView(list: List<Profile>) {
         val profileAdapter = ProfileAdapter(list, this)
-        recyclerView.apply {
-            setHasFixedSize(true)
-            layoutManager = LinearLayoutManager(this@MainActivity)
-            adapter = profileAdapter
-        }
+        recyclerView.layoutManager = LinearLayoutManager(this@MainActivity)
+        recyclerView.adapter = profileAdapter
     }
 
     override fun onResume() {
