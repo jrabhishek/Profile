@@ -6,15 +6,17 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
-    val list: ArrayList<Profile> = ArrayList()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val adapter1 = ProfileAdapter(list, this)
+    }
+
+    fun setUpRecyclerView(list:List<Profile>) {
+        val profileAdapter = ProfileAdapter(list, this)
         recyclerView.apply {
             setHasFixedSize(true)
             layoutManager = LinearLayoutManager(this@MainActivity)
-            adapter = adapter1
+            adapter = profileAdapter
         }
     }
 
