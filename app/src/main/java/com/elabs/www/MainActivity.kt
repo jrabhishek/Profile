@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
-    fun setUpRecyclerView(list: List<Profile>) {
+    fun setUpRecyclerView(list: List<Person>) {
         val profileAdapter = ProfileAdapter(list, this)
         recyclerView.layoutManager = LinearLayoutManager(this@MainActivity)
         recyclerView.adapter = profileAdapter

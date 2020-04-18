@@ -1,12 +1,12 @@
 package com.elabs.www
 
-data class ProfileResponce(
-    val results: List<Profile>
+data class PersonResponce(
+    val results: List<Person>
 )
-data class Profile(
+data class Person(
+    val name: Name,
     val cell: String,
-    val email: String,
-    val name: Name
+    val email: String
 )
 
 data class Name(
