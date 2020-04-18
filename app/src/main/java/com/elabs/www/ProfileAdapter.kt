@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.profile.view.*
 
-class ProfileAdapter(var list: ArrayList<Profile>, val context:Context): RecyclerView.Adapter<ProfileAdapter.ProfileHolder>() {
+class ProfileAdapter(var list: List<Profile>, val context:Context): RecyclerView.Adapter<ProfileAdapter.ProfileHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProfileHolder {
